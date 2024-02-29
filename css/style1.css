@@ -7,25 +7,107 @@ header{
 }
 
 nav{
+    padding-top: 0%;
     background-color: white;
     display: flex;
-    height: 200px;
-    width: 70%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    height: 50px;
+    width: 85%;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    margin: 10px auto;
+    
+}
+.logo{
+    display: flex;
+    width: 10%;
+    height: 70%;
+    padding: 0 auto;
+    float: left;
 }
 nav img{ 
-    width: 100px;
+    display: flex;
+    width: 15px;
     height: auto;
 }
 
-nav ul{ 
-
+nav ul {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    padding-top: -30%;
 }
 
 nav ul li {
-    display: inline;
+    padding-top: -30%;
+    display: flex;             
+    justify-content: flex-end;
     list-style: none;
+    margin-left: 15px;
 }
+
+nav ul li a{
+   margin-left: 15px;
+   align-items: center;
+   justify-content: space-between;
+   border-right: 1px solid gray;
+   padding: 7px;
+}
+nav ul li a:nth-child(3){
+    border-right: none;
+}
+.btn-outline{
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 15px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    background-color: white;
+    width: 72%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+div h1{
+    text-align: justify;
+    letter-spacing: 1px;
+    font-weight: 150;
+    margin-top: -10;
+}
+div h2{
+    text-align: justify;
+    letter-spacing: 1px;
+    font-weight: 150;
+}
+div h3{
+    
+    float: right;
+}
+
+.images{
+    
+
+}
+
+.images img{
+    max-width: 100%;
+}
+.imgLeft, .imgRight{
+    display: inline-block; 
+    vertical-align: top;
+    width: 50%;
+    width: 130%;
+    
+}
+
+.imgLeft img, .imgRight img{
+    max-width: 100%;
+
+}
+.imgRight{
+    flex:1;
+    justify-content: flex-end;
+}  
