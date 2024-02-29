@@ -1,0 +1,31 @@
+header{
+    display: flex;
+    background-color: white;
+    width: 85%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+nav{
+    background-color: white;
+    display: flex;
+    height: 200px;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+nav img{ 
+    width: 100px;
+    height: auto;
+}
+
+nav ul{ 
+
+}
+
+nav ul li {
+    display: inline;
+    list-style: none;
+}
