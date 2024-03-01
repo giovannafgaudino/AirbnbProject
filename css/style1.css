@@ -88,15 +88,14 @@ div h3{
 }
 
 .images{
-    
+    display: flex;
 
 }
 
 .images img{
     max-width: 100%;
 }
-.imgLeft, .imgRight{
-    display: inline-block; 
+.imgLeft {
     vertical-align: top;
     width: 50%;
     width: 130%;
