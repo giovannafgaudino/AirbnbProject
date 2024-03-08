@@ -30,7 +30,7 @@ nav .logo{
     display: flex;
     width: 10%;
     height: 55%;
-    padding: 1%;
+    /* padding: 1%; */
     margin: 10px;
     padding-left: 3%;
     float: left;
