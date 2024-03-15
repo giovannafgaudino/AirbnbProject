@@ -28,7 +28,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20%; 
+    margin-left: 10%; 
 }
 .menu h1{
     font-size: 15px;
@@ -74,20 +74,22 @@ body{
 }
 
 .login{
+    margin-left: 10px ;
     display: flex;
     width: 32%;
     align-items: center;
     justify-content: flex-end;  
+    margin-left: 2%;
 }
 .login h1{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
 }
 .login a{
     /* padding-left: 20px;
     padding-right: 20px; */
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 5%;
+    margin-right: 2%;
 }
 .login div{
     display: flex;
