@@ -1,7 +1,8 @@
 # AirbnbProject
 Front-End Design Template Site Airbnb
 ## Atividade
-Checkpoint 01 Front-End Design 2º Semestre 
+Checkpoint 01 Front-End Design 2º Semestre
+<br> 
 Engenharia de Software - ESPB
 ## Autores
 |Nome                              |RM             |
