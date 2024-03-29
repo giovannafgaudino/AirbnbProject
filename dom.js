@@ -43,3 +43,66 @@ salvar.addEventListener("click", (e)=>{
 console.log(localStorage.getItem('salvo'))
 
 
+// Menu:
+
+let subMenu = document.getElementById("subMenu");
+function toggleMenu(){
+    subMenu.classList.toggle("open-menu");
+}
+
+window.onclick = function(event) {
+    if (!event.target.closest('.sub-menu-button')) {
+        subMenu.classList.remove('open-menu');
+    }
+}
+
+
+// Modal Imagens:
+
+
+const images = [...document.querySelectorAll('.image')];
+
+const popup = document.querySelector('.popup');
+const closeBtn = document.querySelector('.close-btn');
+const imageName = document.querySelector('.img-name');
+const largeImage = document.querySelector('.large-image');
+const imageIndex = document.querySelector('.index');
+const leftArrow = document.querySelector('.prev');
+const rightArrow = document.querySelector('.next');
+
+let index = 0; 
+
+images.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        updateImage(i);
+        popup.classList.toggle('active');
+    })
+})
+
+const updateImage = (i) => {
+    let path = `img/img${i+1}.png`;
+    largeImage.src = path;
+    imageName.innerHTML = path;
+    imageIndex.innerHTML = `0${i+1}`;
+    index = i;
+}
+
+closeBtn.addEventListener('click', () => {
+    popup.classList.toggle('active');
+})
+
+leftArrow.addEventListener('click', () => {
+    if(index > 0){
+        updateImage(index - 1);
+    }
+})
+
+rightArrow.addEventListener('click', () => {
+    if(index < images.length - 1){
+        updateImage(index + 1);
+    }
+})
+
+
+
+
