@@ -521,6 +521,7 @@ td h2{
     /* padding: 40% auto; */
     margin: 5%; 
     border-radius: 20px;
+    
 }
 .information-frame-table{
     /* display: flex; */
@@ -632,18 +633,16 @@ td h2{
 }
 .avaliation-section-hospedes{
     display: grid;
-    border-top: 1px solid rgba(196, 193, 193, 0.685);
-    border-bottom:1px solid rgba(196, 193, 193, 0.685); 
+    border-top: 1px solid rgba(196, 193, 193, 0.685); 
     padding-top: 5%;
     padding-bottom: 35px;
     height: 100px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 270px ;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 270px ; */
 }
 .comentarios{
     margin-top: 35px;
     width: 50%;
-    border: 2px solid black;
     padding: 2%;
     border-radius: 15px;
     text-align: center;
@@ -692,6 +691,8 @@ td h2{
     border-bottom: 1px solid rgba(196, 193, 193, 0.685); padding-bottom: 35px;
 }
 .maps h1{
+    padding-top: 30px;
+    border-top: 1px solid rgba(196, 193, 193, 0.685);
     margin-top: 35px;
     font-size: 1.6rem;
     padding-bottom: 45px;
@@ -858,11 +859,11 @@ footer{
 
 .popup.active .close-btn,
 .popup.active .index,
-.popup.active .large,
+.popup.active .large-image,
 .popup.active .img-name,
 .popup.active .arrow-btn{
     opacity: 1;
-    transition: opacity .5s;
+    transition: opacity .3s;
     transition-delay: 1s;
 }
 
@@ -962,3 +963,65 @@ footer{
     object-fit: contain;
     opacity: 0;
 }
+
+.show-comments{
+    display: flex;
+    max-width: 500px;
+    
+}
+
+.show-comments h1 {
+    border: 1px solid #000;
+    height: 1px;
+    width: 60%;
+    background: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+    align-content: center;
+    font-weight: 500;
+    
+}
+
+.avaliation-section-hospedes h1{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.avaliation-section-hospedes h3{
+    margin-left: 60px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    
+}
+
+.avaliation-section-hospedes h4{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.avaliation-section-hospedes p{
+    width: 30%;
+    font-size: 16px;
+    line-height: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.perfil-img {
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+}
+
+.pessoa {
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+

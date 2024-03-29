@@ -2,25 +2,6 @@
 
 const [compartilhar, salvar] = document.querySelectorAll(".box-title--btn")
 const svg = salvar.querySelector('svg')
-// const buttonPhotos = document.querySelector(".btn-photos");
-// const photos = document.querySelector("galery-wraper");
-
-// const openClick = function (){
-//     photos.classList.add("d-block");
-// }
-
-// const eventPhotos = function(event){
-//     const clickOfElement = event.target.classList[0];
-//     const classListNameArray = ['galery-close', 'galery-photos', 'galery-photos-content'];
-//     const isClassList = classListNameArray.includes(clickOfElement);
-//     if (isClassList){
-//         photos.classList.remove('d-block');
-//     }
-// }
-
-// buttonPhotos.addEventListener("click", openClick);
-// photos.addEventListener("click", eventPhotos);
-
 
 if (localStorage.getItem('salvo')){
     svg.style.setProperty('fill','black')
@@ -104,5 +85,58 @@ rightArrow.addEventListener('click', () => {
 })
 
 
+// Feedback:
 
+const feedbacks = [{
+    nome: 'Alexandre Russi',
+    cidade: 'São Paulo, Brasil · Ficou algumas noites',
+    avaliacao: 'fevereiro de 2024',
+    comentario: 'Estadia excelente. Local exatamente como descrito e o Lucas sempre responsivo. O Lucas (gerente) também muito simpático e prestativo. Recomendo o local!',
+    foto: 'img/prof.jpg'
+},
+{
+    nome: 'Beatriz Dantas',
+    cidade: 'São Paulo, Brasil · Ficou algumas noites',
+    avaliacao: 'março de 2024',
+    comentario: 'Site ingrato.',
+    foto: 'img/bia.jpg'
+}
+];
+
+const areaFeedbacks = document.querySelector('#feedbacks');
+
+window.onload = function renderizarFeedbacks() {
+    feedbacks.forEach(elemento => {
+
+const divPessoa = document.createElement('div');
+divPessoa.classList.add('pessoa');
+
+
+const fotoDaPessoa = document.createElement('img');
+fotoDaPessoa.src = elemento.foto;
+fotoDaPessoa.alt = "Foto de " + elemento.nome;
+fotoDaPessoa.classList.add('perfil-img'); 
+
+const nomeDaPessoa = document.createElement('h1');
+        nomeDaPessoa.innerHTML = elemento.nome;
+
+        divPessoa.appendChild(fotoDaPessoa);
+        divPessoa.appendChild(nomeDaPessoa);
+        areaFeedbacks.appendChild(divPessoa);
+
+const cidadeDaPessoa = document.createElement('h3');
+        cidadeDaPessoa.innerHTML = elemento.cidade;
+        areaFeedbacks.appendChild(cidadeDaPessoa);
+
+const avaliacaoDaPessoa = document.createElement('h4');
+        avaliacaoDaPessoa.innerHTML = elemento.avaliacao;
+        areaFeedbacks.appendChild(avaliacaoDaPessoa);
+
+
+
+const comentarioDaPessoa = document.createElement('p');
+        comentarioDaPessoa.innerHTML = elemento.comentario;
+        areaFeedbacks.appendChild(comentarioDaPessoa);
+    });
+};
 
