@@ -1,3 +1,78 @@
+@media screen and (max-width:1250px){
+    header .header-main, body .main {
+        width: 90%;
+    }
+}
+@media screen and (max-width:1130px){
+    .menu, .menu button, .login a{
+        max-width: 40%;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        width: fit-content;
+        justify-content: none;
+        margin-left: 0%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    } 
+    nav{
+        justify-content: flex-end;
+    }
+    .menu .lupa{
+        max-width: 40%;
+        white-space: wrap;
+        overflow: visible;
+        text-overflow: ellipsis; 
+        color: (--black-color);
+    }
+    .galery{
+        grid-template-rows: 250px 250px;     
+}
+    /* .resume-information{
+        max-width: 100%;
+        min-width: 20%;
+        grid-template-columns: 1fr 1fr;
+        
+    } */
+    /* .resume-information-left{
+        
+    } */
+    .box-check{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    header .header-main, body .main {
+        width: 95%;
+    }
+    .resume-information{
+        white-space: wrap;
+    }
+    /* .body{
+        position: relative;
+    }
+    .resume-information{
+        max-width: 100%;
+        min-width: 30%;
+        
+        position:sticky;
+         white-space: nowrap; 
+        flex-wrap: nowrap;
+    }
+    .resume-information-left{
+        padding-left: 0.5rem;
+    }*/
+} 
+@media screen and (max-width: 800px){
+    .resume-information{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 1.5rem;
+    }
+    .box-check{
+        display: none;
+    }
+}
 :root{
     --primary-color: #ff385c;
     --gray-color: #d5d5d5;
@@ -18,19 +93,11 @@ button, a {
 header{
     border-bottom: 1px solid var(--gray-color) ;
     width: 100%;
-
-    
-    
     align-items: center;
     /* justify-content: space-between; */
     flex-wrap: nowrap;
 }
-/* .header {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-} */
+
 .header-main{
     width: 78%;
     height: auto;
@@ -68,6 +135,12 @@ header .menu button{
 header .menu .line{
     border-right:  1px solid var(--gray-color);
     height: 60%;
+}
+.menu-01{
+    font-weight: bold;
+}
+.menu-02{
+    color: #717171;
 }
 .lupa svg{
     color: var(--white-color);
@@ -180,6 +253,7 @@ body{
     grid-template-columns:  1fr 1fr 1fr 1fr;
     gap: 0.5rem;
     margin-bottom: 1.3rem;
+    position: relative;
 }
 .galery div{
     width: 100%;
@@ -214,7 +288,17 @@ body{
 .galery .img5 img{
     border-bottom-right-radius: 20px;
 }
-
+.galery button{
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    border: 2px solid var(--black-color);
+    background-color: var(--white-color);
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
 .btn-photos{
     position: absolute; 
     width: 15%;
@@ -241,9 +325,12 @@ body{
 }
 .resume-information{
     display: grid;
-    grid-template-columns: 55% 44%;
+    grid-template-columns: 2fr 1fr;
     padding-top: 1.5rem;
-    gap: 0.5rem;
+    position:relative;
+}
+.resume-information-left{
+    padding-right: 4rem;
 }
 .resume-information .resume-information-left p{
     margin-top: 0.5rem;
@@ -263,24 +350,22 @@ span:last-child::after{
     margin-top: 1.5rem;
     border: 1px solid var(--gray-color);
     border-radius: 10px;
-    width: 95%;
-    padding: 0.9rem; 
+    padding: 0.5rem 0;
+    width: 100%;
     column-gap: 0.5rem;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .resume-information-frame div{
     align-items: center;
     justify-content: center;
-    /* width: fit-content; */
     display: flex;
     padding: 0.6rem; 
-    
 }
 .resume-information-frame h2 {
     font-size: 1.0rem;
     text-align: center;
-    
 }
 .resume-information-frame div:nth-child(3) {
     display: grid;
@@ -294,16 +379,13 @@ span:last-child::after{
     align-items: center;
     justify-content: center;
 }
-
 .resume-information-frame01{ 
     display: flex;  
     align-items: center;     
 }
-
 .resume-information-frame01 svg{
     width: 30%;
 }
-
 .anfitriao {
     display: flex;
     align-items: center;  
@@ -414,7 +496,6 @@ span:last-child::after{
     margin: 0;
     justify-content: center
 }
-
 .icone-dormitórios svg{
     padding-top: 0;
     height: 30px;
@@ -485,15 +566,105 @@ span:last-child::after{
 .avatiation-frame svg{
     padding-top: 1.5rem;
 }
-.box-check{
-    border: 1px solid olivedrab;
-    width: 100%;
-}
 .calendario{
     /* width: 60%; */
     padding: 0 auto;
     padding-bottom: 10px;
     
+}
+.resume-information .box-check{
+    border: 1px solid var(--gray-color);
+    border-radius: 10px;
+    width: auto;
+    margin: 0 auto;
+    padding: 1.5rem;
+    box-shadow: 0 0 8px var(--gray-color);
+}
+.box-check h3{
+    font-size: 1.5rem;
+}
+.box-check span{
+    font-size: 1rem;
+}
+.box-check .booking{
+    border: 1px solid var(--gray-color);
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.booking .booking-form{
+    order: 1px solid var(--gray-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.booking .check-in{
+    border-right: 1px solid var(--gray-color) ;
+}
+.booking .check-in, .booking .checkout{
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+}
+.booking label{
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.book-hospedes{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    border-top: 1px solid var(--gray-color);
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+}
+.btn-booking{
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1.6rem 0;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    background: #ff385c;
+    background: linear-gradient(150deg, rgba(255,56,92,1) 0%, rgba(182,58,134,1) 100%);
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: var(--white-color);
+}
+.box-check .infos-booking{
+    text-align: center;
+    font-size: 0.85rem;
+    margin: 1rem 0;
+    color: var(--gray-font-color);
+}
+.box-check .preco{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 300;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1pX solid var(--gray-color);
+}
+.box-check .preco > div{
+    display: flex;
+    justify-content: space-between;
+}
+.box-check .preco p:first-child{
+    text-decoration: underline;
+}
+.box-check .preco-total{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .avaliation-section{
@@ -543,7 +714,7 @@ span:last-child::after{
     border-radius: 0.4rem;
     background-color: transparent;
 }
- .avaliation-hospedes{
+.avaliation-hospedes{
     display: grid;
     gap: 1rem;
     grid-template-rows: 80px 10px;
@@ -658,6 +829,7 @@ span:last-child::after{
     align-items: center;
     padding-top: 0.9rem;
     gap: 0.2rem;
+    border: none;
 }
 .button-show-more button{
     background-color: transparent;
@@ -665,6 +837,9 @@ span:last-child::after{
     text-decoration: underline;
     font-weight: bold;
     font-size: 0.9rem;
+}
+.button-show-more svg{
+    align-items: center;
 }
 .box-anfitriao {
     height: 300px;
@@ -676,34 +851,130 @@ span:last-child::after{
 .box-anfitriao-frame{
     background-color:var(--gray-light-color);
     display: grid;
-    grid-template-columns: 39% 60%;
-    grid-template-rows: 360px;
-    column-gap: 1rem;
+    height: fit-content;
+    padding-bottom: 0.5rem;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr;
     border-radius: 1rem;
     height: 300px;
+    padding: 1.9rem;
 }
 .anfitriao-frame-infos{
     width: 80%;
-    padding:1.7rem;
+    padding: 0.5rem;
     margin: 0 auto;
-}
-.anfitriao-frame-infos{
-    margin: 0 auto;
-}
-.boxes-infos{
-    margin: 0 auto;
-}
-.boxes-infos img{
-    width: 80%;
-    padding: 0 auto;
-    margin: 0 auto;
-    
-    justify-content: center;
-    
 }
 
+.boxes-infos{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: var(--white-color);
+    margin: 0 auto;
+    padding: 1.3rem;
+    border-radius: 10px;
+    justify-content: center;
+
+}
+.boxes-infos div:first-child{
+    padding-top: 1.5rem;
+    width: 100%;
+    justify-items: center;
+}
+.boxes-infos div h3{
+    padding-bottom: 0.3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.boxes-infos div p{
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--gray-color);
+    font-size: 0.8rem;
+}
+.boxes-infos div:first-child{
+    align-items: center;
+    justify-content: center;
+}
+.boxes-infos div p:first-child{
+    padding: 0;
+    align-items: center;
+    width:100%;
+    text-align: center;
+}
+.boxes-infos div p:last-child{
+    border-bottom: none;
+}
+.boxes-infos div img{
+    width: 110px;
+    height: 110px;
+    padding: 0 25%;
+    border-radius: 100%;
+    object-fit: cover; 
+}
+.boxes-infos  div h1{
+    padding: 0;
+    align-items: center;
+    width:100%;
+    text-align: center;
+}
+.frame-infos-anfiatrião div{
+    display: flex;
+    padding-top: 1rem;
+    align-items: center;
+}
+.frame-infos-anfiatrião p{
+    font-weight: 300;
+}
+.hospedagem{
+    padding: 0.5rem 2rem;
+}
+.hospedagem div{
+    padding: 1rem 0;
+}
+.hospedagem h3{
+    padding-bottom: 0.5rem;
+}
+.hospedagem p{
+    font-weight: 300;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 0.5rem
+}
+.flex p{
+    padding: 0.2rem;
+    align-items: center;
+}
+.hospedagem img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.hospedagem-p{
+    padding-bottom: 0;
+}
+.button-hospedagem{
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-color);
+}
+.button-hospedagem button{
+    background-color: var(--black-color);
+    border: 1px solid var(--black-color);
+    color: var(--white-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+.hospedagem span{
+    gap: 1rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
 footer{
     background-color: var(--gray-light-color);
+    padding-bottom: 1.5rem;
 }
 .footer{
     width: 78%;
@@ -742,36 +1013,3 @@ footer{
 }
 
 
-@media screen and (max-width:1250px){
-    header, body .main {
-        width: 90%;
-    }
-}
-@media screen and (max-width:1130px){
-    .menu, .menu button, .login a{
-        max-width: 40%;
-        white-space: nowrap;
-        flex-wrap: nowrap;
-        width: fit-content;
-        justify-content: none;
-        margin-left: 0%;
-        overflow: hidden;
-        text-overflow: ellipsis '...';
-        direction: ltr;
-        
-    } 
-    .menu .lupa{
-        max-width: 40%;
-        white-space: wrap;
-        overflow: visible;
-        text-overflow: ellipsis; 
-        color: (--black-color);
-    }
-    .galery{
-        grid-template-rows: 250px 250px;  
-    
-}
-}
-@media screen {
-    
-}
