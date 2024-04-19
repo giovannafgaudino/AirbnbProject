@@ -1029,27 +1029,4 @@ footer{
     gap: 10px;
 }
 
-@media screen and (max-width: 1250px){
-    .header, .body  {
-    width: 90%;
-    margin: 0 auto;
-   }
-}
-@media screen and(max-width: 1024px) {
-    .header, .header div, .logo, .menu, .menu h1, .menu div, .login{
-        margin-left: 1.0rem;
-        margin-right: 0;
-        width: 30%;
-        justify-content: center;
-        padding-left: 0;
-        padding-right: 0;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-}
-/* @media screen and(max-width: 1024px){
-    .galery{
-        grid-template-rows: 100px;
-    }
-} */
+
