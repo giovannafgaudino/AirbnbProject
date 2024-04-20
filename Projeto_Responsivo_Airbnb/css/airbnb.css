@@ -25,53 +25,153 @@
         color: (--black-color);
     }
     .galery{
-        grid-template-rows: 250px 250px;     
-}
-    /* .resume-information{
-        max-width: 100%;
-        min-width: 20%;
-        grid-template-columns: 1fr 1fr;
-        
-    } */
-    /* .resume-information-left{
-        
-    } */
+        height: 150%;
+        grid-template-rows: subgrid;
+    
+    }
     .box-check{
         flex-wrap: wrap;
     }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1024px){
     header .header-main, body .main {
         width: 95%;
     }
     .resume-information{
-        white-space: wrap;
-    }
-    /* .body{
-        position: relative;
-    }
-    .resume-information{
-        max-width: 100%;
-        min-width: 30%;
-        
-        position:sticky;
-         white-space: nowrap; 
-        flex-wrap: nowrap;
-    }
-    .resume-information-left{
-        padding-left: 0.5rem;
-    }*/
-} 
-@media screen and (max-width: 800px){
-    .resume-information{
         display: grid;
         grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+    .avatiation-frame .scroll{
+        min-width: 100%;
+        /* transform: rotate(90deg); */
+        overflow-y:visible;
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 840px){
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    body, body footer, footer .foot {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .resume-information{
+        display: grid;
         padding-top: 1.5rem;
     }
-    .box-check{
+    .resume-information-left{
+        width: 100%;
+    }
+    .resume-information-right{
+        display: none;
+        
+    }
+    .resume-information-left{
+        width: 100%;
+        grid-area: 1 / 1 /3/ 3;
+    }
+    .avatiation-frame{
+        overflow-x:scroll;
+    }
+    .avatiation-frame .scroll{
+        min-width: 100%;
+        /* transform: rotate(90deg); */
+        overflow-y:visible;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width:701px){ 
+    header .header-main, .body .galery, .box-title-btns .box-title--btn{
+        display: none;
+    } 
+    body{
+        max-width: 1000px;
+        width:100%;
+        border: none;
+        box-sizing: border-box;
+    }
+    body .dispositivos-min-header{
+        display: flex;
+        height: fit-content;
+        width:98%;
+        margin: 0 auto;
+        padding: 0 1.0rem;
+        box-sizing: border-box;
+    }
+    body .dispositivos-min-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    body .dispositivos-min-header div{
+        display: flex;
+        align-items: center;
+        
+    }
+    body .dispositivos-min-header .vetores div{
+        padding: 0 1.5rem;
+        top: 5rem;
+    }
+    body .dispositivos-min-header .vetores svg{
+        padding: 0.5rem;
+        border-radius: 10px;
+        top: 5rem;
+    }
+    .galery-container{
+        height: 90%;
+        
+    }
+    .galery-slider {
+        width: 100%;
+        overflow-x: auto; /* Adicionando rolagem horizontal */
+        white-space: nowrap; /* Evita que as imagens quebrem para uma nova linha */
+    }
+    
+    .galery-scroll {
+        max-width: 100%;
+        flex: 0 0 auto;
+        display: inline-block; 
+        margin-right: 0.5rem; 
+        white-space: nowrap;
+    }
+    
+    .galery-scroll img {
+        width: 100%; 
+        height: auto;
+        object-fit: cover;
+    }
+    .resume-information-left div:first-child{
+        font-size: 0.7rem;
+    }
+    
+    .avaliation-section .avaliation-section-hospedes{
+        display: flex;
+        margin: 1rem, 0;
+        flex-direction: column;
+    }
+    .avaliation-section-hospedes .avaliation-hospedes{
+        display: block;
+    }
+    body .box-anfitriao{
         display: none;
     }
+    /* .main .body{
+        padding: 0 1.5rem;
+    } */
+    .avatiation-frame .scroll{
+        min-width: 100%;
+        /* transform: rotate(90deg); */
+        overflow-y:visible;
+        white-space: nowrap;
+    }
+
 }
 :root{
     --primary-color: #ff385c;
@@ -85,10 +185,18 @@
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    /* max-width: 1440px; */
 }
 button, a {
     cursor: pointer
+}
+.none{
+    display: none;
+}
+.scroll{
+    max-width: 100%;
+    /* transform: rotate(90deg); */
+    overflow-y:visible;
+    white-space: nowrap;
 }
 header{
     border-bottom: 1px solid var(--gray-color) ;
@@ -185,13 +293,13 @@ body{
 }
 .main{
     width: 78%;
+    /* max-width: 1440px; */
     height: auto;
     margin: 0 auto;
     padding-top: 0;
 }
 
 .body{
-    /* width: 75%; */
     margin: 0 auto;
     height: auto;
     padding-top: 1.3rem;
@@ -246,7 +354,7 @@ body{
 }
 
 .galery{
-    height: 100px;
+    /* height: 100px; */
     display: grid;
     margin-top: 1.5rem;
     grid-template-rows: 180px 180px;  
@@ -325,7 +433,7 @@ body{
 }
 .resume-information{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 40%;
     padding-top: 1.5rem;
     position:relative;
 }
@@ -550,18 +658,29 @@ span:last-child::after{
     padding-bottom: 2.0rem;
 }
 .avatiation-frame{
+    display: flex; 
+    white-space: nowrap;
+}
+.avatiation-frame .scroll{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     padding-top: 2rem;
     gap: 1rem;
+    white-space: nowrap;   
 }
+
 .avatiation-frame div img{
     width: 80%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-top: 2rem;
+    gap: 1rem;
+    white-space: nowrap;   
 }
 .avatiation-frame div{
     border-right: 1px solid var(--gray-color);
     gap: 1rem;
-    padding: rem;
+    white-space: nowrap;
 }
 .avatiation-frame svg{
     padding-top: 1.5rem;
@@ -572,10 +691,13 @@ span:last-child::after{
     padding-bottom: 10px;
     
 }
-.resume-information .box-check{
+.resume-information-right{
+    float: right;
+    padding: 1rem;
+}
+.box-check{
     border: 1px solid var(--gray-color);
     border-radius: 10px;
-    width: auto;
     margin: 0 auto;
     padding: 1.5rem;
     box-shadow: 0 0 8px var(--gray-color);
@@ -587,17 +709,17 @@ span:last-child::after{
     font-size: 1rem;
 }
 .box-check .booking{
-    border: 1px solid var(--gray-color);
     margin-top: 1rem;
-    width: 100%;
     border-radius: 10px;
     box-sizing: border-box;
 }
 .booking .booking-form{
-    order: 1px solid var(--gray-color);
+    border: 1px solid var(--gray-color);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto;
+    box-sizing: border-box;
+    
 }
 .booking .check-in{
     border-right: 1px solid var(--gray-color) ;
@@ -606,24 +728,27 @@ span:last-child::after{
     grid-column: span 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: flex-start;
     padding: 0.4rem 1rem;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 .booking label{
     font-size: 0.7rem;
     font-weight: bold;
 }
+form input, form select{
+    box-sizing: border-box;
+    position: relative;
+    width: auto;
+}
 .book-hospedes{
     grid-column: span 2;
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: flex-start;
     border-top: 1px solid var(--gray-color);
     padding: 0.4rem 1rem;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 .btn-booking{
     width: 100%;
