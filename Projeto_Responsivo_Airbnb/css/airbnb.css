@@ -171,6 +171,26 @@
         overflow-y:visible;
         white-space: nowrap;
     }
+    .min-header{
+        padding-top: 0.5rem;
+        height: 4rem;
+        justify-content: space-between;
+    }
+    .min-header svg{
+        justify-content: space-between;
+    }
+    .min-header div:first-child p{
+        font-weight: bold;
+        padding-left: 1rem;
+    }
+    .min-header div button{
+        border: none;
+        background-color: transparent;
+        padding-left: 1rem;
+    }
+    .min-header div:first-child button{
+        padding-left: 0;
+    }
 
 }
 :root{
