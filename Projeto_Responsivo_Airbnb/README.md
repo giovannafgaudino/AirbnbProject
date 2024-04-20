@@ -1,7 +1,7 @@
 # Airbnb Project
 Front-End Design Template Site Airbnb
 ## Atividade
-Checkpoint 01 Front-End Design 2º Semestre 
+Checkpoint 02 Front-End Design 2º Semestre 
 Engenharia de Software - ESPB
 ## Autores
 |Nome                              |RM             |
@@ -19,33 +19,11 @@ Montar em HTML e CSS uma página de algum imóvel apresentado no site [Airbnb](h
 O que a página deve conter: 
 <details>
     <ul>
-        <li>Você deve utilizar apenas as informações do imóvel apresentadas pela plataforma.</li>
-        <li>Título da página – nome do imóvel anunciado na página.</li>
-        <li>Descrição do imóvel – pequena descrição de como o imóvel é apresentadona plataforma.</li>
-        <li>Valor da diária.</li>
-        <li>Tipo de acomodação.</li>
-        <li>Comodidades apresentadas.</li>
-        <li>Localização / quantidade de hóspedes / número de quartos / número debanheiros.</li>
-        <li>Regras das casa.</li>
-        <li>05 imagens do imóvel (grade principal somente).</li>
-        <li>02 avaliações de pessoas que se hospedaram.</li>
+        <li>Página deve ser responsiva</li>
+        <li>Utilizar media query</li>
+        <li>Utilizar flexbos</li>
+        <li>Utilizar gris layout</li>
     </ul>
 </details>
 
-## Requisitos de Front-End Design
-O que deve conter sobre a matéria:
-<details>
-    <ul>
-        <li>Utilização da estrutura HTML válida.Organização de código.</li>
-        <li>Utilização de títulos, parágrafos, imagens e listas.</li>
-        <li>Imagens que não possuírem o atributo alt preenchido, terão 0.25 dedesconto na nota por imagem.</li>
-        <li>Página sem title, title vazio ou title como document, perderão 1.0 da nota.</li>
-        <li>Uso de formatação CSS externa para todos os elementos.</li>
-        <li>Padronização e coerência no uso de cores e tamanhos das fontes.</li>
-        <li>Utilização de Google Fonts para a página inteira.</li>
-        <li>Utilizar flexbox para organização.</li>
-        <li>Padronização do tamanho das imagens.</li>
-        <li>Exibição das informações do imóvel de forma clara e objetiva.</li>
-        <li>Utilização de estrutura de pastas coerente com o projeto.</li>
-    </ul>
-</details>
+
