@@ -25,5 +25,5 @@ Para ver a entrega do CP01 Front-end Design, acesse a branch ['Projeto_Estático
 
 Para ver a entrega do CP02 Front-end Design, acesse a branch ['Projeto-responsivo-Airbnb'](https://github.com/giovannafgaudino/AirbnbProject/tree/Projeto-responsivo-Airbnb)
 =======
->>>>>>> feeafa05a87cb25b82767b9ac2c1fb2ba8b4b2fa
+>>>>>>> 
 
